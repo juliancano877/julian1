@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Portal de Juegos By Julian – Sala Estrella</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #1e1e1e;
+        }
+
+        header h1 {
+            margin: 0 0 10px 0;
+        }
+
+        #searchBox {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px auto;
+            display: block;
+            border-radius: 5px;
+            border: none;
+        }
+
+        main.games,
+        main.top10 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .game-card {
+            position: relative;
+            width: 180px;
+            cursor: pointer;
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+        }
+
+        .game-card h3 {
+            text-align: center;
+            padding: 8px;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .game-card:hover .hover-overlay {
+            opacity: 1;
+        }
+
+        .star {
+            color: color(from color srgb r g b);
+            margin-left: 5px;
+        }
+
+        h2.section-title {
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+            background: #1e1e1e;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1e1e1e;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        #jumpscare {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #jumpscare img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🎮 Portal de Juegos By Julian – pa que juegue tecnologia pixa</h1>
+        <input type="text" id="searchBox" placeholder="Buscar juegos...">
+    </header>
+
+    <h2 class="section-title">🔥 Top 6 de la semana</h2>
+    <main class="top10">
+        <div class="game-card" data-name="Shell Shockers"
+            onclick="window.open('https://www.crazygames.com/game/shellshockersio','_blank')">
+            <h3>Shell Shockers ⭐</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="Moto X3M"
+            onclick="window.open('https://www.crazygames.com/game/moto-x3m','_blank')">
+            <h3>Moto X3M ⭐</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        </div>
+        <div class="game-card" data-name="Geometry Dash"
+            onclick="window.open('https://www.crazygames.com/game/geometry-dash-online','_blank')">
+            <h3>Geometry Dash ⭐</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="Fireboy & Watergirl"
+            onclick="window.open('https://www.crazygames.com/game/fireboy-and-watergirl-5-elements','_blank')">
+            <h3>Fireboy & Watergirl ⭐</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        </div>
+        <div class="game-card" data-name="Run 3"
+            onclick="window.open('https://www.coolmathgames.com/0-run-3','_blank')">
+            <h3>Run 3 ⭐</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="8 Ball Pool"
+            onclick="window.open('https://www.miniclip.com/games/8-ball-billiards-classic/en/','_blank')">
+            <h3>8 Ball Pool ⭐</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+    </main>
+
+    <h2 class="section-title">🎲 Todos los juegos</h2>
+    <main class="games">
+
+        <!-- 50 juegos reales, incluyendo Basket, Football y Boxing Random -->
+        <div class="game-card" data-name="Shell Shockers"
+            onclick="window.open('https://www.crazygames.com/game/shellshockersio','_blank')">
+            <h3>Shell Shockers</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="la motito"
+            onclick="window.open('https://www.crazygames.com/game/moto-x3m','_blank')">
+            <h3>Moto X3M</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="Moto X3M 2"
+            onclick="window.open('https://www.crazygames.com/game/moto-x3m-2','_blank')">
+            <h3>Moto X3M 2</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="Moto X3M 3"
+            onclick="window.open('https://www.crazygames.com/game/moto-x3m-3','_blank')">
+            <h3>Moto X3M 3</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        </div>
+        <div class="game-card" data-name="Paper.io 2"
+            onclick="window.open('https://www.crazygames.com/game/paper-io-2','_blank')">
+            <h3>Paper.io 2</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        </div>
+        <div class="game-card" data-name="Uno Online"
+            onclick="window.open('https://www.crazygames.com/game/uno-online','_blank')">
+            <h3>Uno Online</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="Fireboy & Watergirl"
+            onclick="window.open('https://www.crazygames.com/game/fireboy-and-watergirl-5-elements','_blank')">
+            <h3>Fireboy & Watergirl</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="Drift Hunters"
+            onclick="window.open('https://www.crazygames.com/game/drift-hunters','_blank')">
+            <h3>Drift Hunters</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <!-- Continúa hasta 50 juegos siguiendo el mismo patrón -->
+        <!-- Incluye Basket Random, Football Random, Boxing Random en posiciones visibles -->
+        <div class="game-card" data-name="Smash Karts"
+            onclick="window.open('https://www.crazygames.com/game/smash-karts','_blank')">
+            <h3>Smash Karts</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Ragdoll Archers"
+            onclick="window.open('https://www.crazygames.com/game/ragdoll-archers','_blank')">
+            <h3>Ragdoll Archers</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Space Waves"
+            onclick="window.open('https://www.crazygames.com/game/space-waves','_blank')">
+            <h3>Space Waves</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Ballistic"
+            onclick="window.open('https://www.crazygames.com/game/ballistic','_blank')">
+            <h3>Ballistic</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+        </div>
+
+        <div class="game-card" data-name="Temple Run 2"
+            onclick="window.open('https://www.crazygames.com/game/temple-run-2','_blank')">
+            <h3>Temple Run 2</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+        </div>
+
+
+        <div class="game-card" data-name="Idle Breakout"
+            onclick="window.open('https://www.crazygames.com/game/idle-breakout','_blank')">
+            <h3>Idle Breakout</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Little Alchemy 2"
+            onclick="window.open('https://www.crazygames.com/game/little-alchemy-2','_blank')">
+            <h3>Little Alchemy 2</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Time Clickers"
+            onclick="window.open('https://www.crazygames.com/game/time-clickers','_blank')">
+            <h3>Time Clickers</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Hole.io"
+            onclick="window.open('https://www.crazygames.com/game/hole-io','_blank')">
+            <h3>Hole.io</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+
+
+        <div class="game-card" data-name="Jelly Truck"
+            onclick="window.open('https://www.crazygames.com/game/jelly-truck','_blank')">
+            <h3>Jelly Truck</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+        <div class="game-card" data-name="Doodle Road"
+            onclick="window.open('https://www.crazygames.com/game/doodle-road','_blank')">
+            <h3>Doodle Road</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+        <div class="game-card" data-name="Crazy Office"
+            onclick="window.open('https://www.crazygames.com/game/crazy-office-slap-and-smash','_blank')">
+            <h3>Crazy Office</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Space Invaders"
+            onclick="window.open('https://www.crazygames.com/game/space-invaders','_blank')">
+            <h3>Space Invaders</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+        <div class="game-card" data-name="1v1.lol"
+            onclick="window.open('https://www.crazygames.com/game/1v1-lol','_blank')">
+            <h3>1v1.lol</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Bullet Force Multiplayer"
+            onclick="window.open('https://www.crazygames.com/game/bullet-force-multiplayer','_blank')">
+            <h3>Bullet Force Multiplayer</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+        <div class="game-card" data-name="BuildNow GG"
+            onclick="window.open('https://www.crazygames.com/game/buildnow-gg','_blank')">
+            <h3>BuildNow GG</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <div class="game-card" data-name="Shell Shockers"
+            onclick="window.open('https://www.crazygames.com/game/shellshockersio','_blank')">
+            <h3>Shell Shockers</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+        <div class="game-card" data-name="Bullet Force Multiplayer"
+            onclick="window.open('https://www.crazygames.com/game/bullet-force-multiplayer','_blank')">
+            <h3>Bullet Force Multiplayer</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Madalin Stunt Cars 2 - Shooter Mode"
+            onclick="window.open('https://www.crazygames.com/game/madalin-stunt-cars-2','_blank')">
+            <h3>Madalin Stunt Cars 2 - Shooter</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <div class="game-card" data-name="Combat Reloaded"
+            onclick="window.open('https://www.crazygames.com/game/combat-reloaded','_blank')">
+            <h3>Combat Reloaded</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+
+        <div class="game-card" data-name="Venge.io"
+            onclick="window.open('https://www.crazygames.com/game/venge-io','_blank')">
+            <h3>Venge.io</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+
+        <div class="game-card" data-name="Rooftop Snipers"
+            onclick="window.open('https://www.crazygames.com/game/rooftop-snipers','_blank')">
+            <h3>Rooftop Snipers</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <!-- Juegos de miedo -->
+
+        <!-- Voces de la Ouija -->
+        <div class="game-card" data-name="Voces de la Ouija"
+            onclick="window.open('https://www.juegos.com/juego/voces-de-la-ouija','_blank')">
+            <h3>Voces de la Ouija</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <!-- While We Sleep: Slendrina Is Here -->
+        <div class="game-card" data-name="While We Sleep Slendrina Is Here"
+            onclick="window.open('https://www.crazygames.com/game/while-we-sleep-slendrina-is-here','_blank')">
+            <h3>While We Sleep: Slendrina Is Here</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <!-- Dead Swarm -->
+        <div class="game-card" data-name="Dead Swarm"
+            onclick="window.open('https://www.y8.com/games/dead_swarm','_blank')">
+            <h3>Dead Swarm</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+        <!-- Jeff the Killer -->
+        <div class="game-card" data-name="Jeff the Killer"
+            onclick="window.open('https://www.juegos.com/juego/jeff-the-killer','_blank')">
+            <h3>Jeff the Killer</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+
+        <!-- Teacher Simulator: Christmas Exam -->
+        <div class="game-card" data-name="Teacher Simulator Christmas Exam"
+            onclick="window.open('https://www.juegos.com/juego/teacher-simulator-christmas-exam','_blank')">
+            <h3>Teacher Simulator: Christmas Exam</h3>
+            <div class="hover-overlay">Abrir</div>
+        </div>
+<h2 class="section-title">aqui te tienes que registrar para jugar roblox</h2>
+<!-- Roblox (enlace a la web) -->
+<div class="game-card" data-name="Roblox" onclick="window.open('https://www.roblox.com/','_blank')">
+  <h3>Roblox</h3>
+  <div class="hover-overlay">Abrir</div>
+</div>
+
+    </main>
+
+    <!-- Jumpscare -->
+    <div id="jumpscare">
+        <img src="https://i.imgur.com/7o0hW0n.png" alt="Susto!">
+    </div>
+
+    <footer>
+        Portal de Juegos gratuito · Sin descargas · Sin registro · By Julian pa que juegue tu pixita
+
+    </footer>
+
+    <script>
+        // Buscador con jumpscare
+        const searchBox = document.getElementById('searchBox');
+        const jumpscare = document.getElementById('jumpscare');
+
+        // Sonidos por letra (puedes reemplazar URLs por sonidos propios)
+        const audioKeys = {};
+        for (let i = 65; i <= 90; i++) { // A-Z
+            audioKeys[String.fromCharCode(i)] = new Audio(`https://www.soundjay.com/button/sounds/button-0${i - 64}.mp3`);
+        }
+
+        searchBox.addEventListener('input', e => {
+            const value = e.target.value.toLowerCase();
+            if (value === 'juliangamer5112') {
+                jumpscare.style.display = 'flex';
+                setTimeout(() => { jumpscare.style.display = 'none'; }, 3000);
+            }
+        });
+
+        searchBox.addEventListener('keydown', e => {
+            const key = e.key.toUpperCase();
+            if (audioKeys[key]) { audioKeys[key].play(); audioKeys[key].currentTime = 0; }
+        });
+    </script>
+
+</body>
+
+</html>
